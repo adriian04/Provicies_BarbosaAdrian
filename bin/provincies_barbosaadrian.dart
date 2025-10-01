@@ -21,8 +21,12 @@ void main(List<String> args) async {
         print("Has d'indicar una província");
         return;
       }
-      final comarques = await repository.obtenirComarques(args[1]);
-      comarques.forEach(print);
+      try {
+        final comarques = await repository.obtenirComarques(args[1]);
+        comarques.forEach(print);
+      } catch (e) {
+        print('Província no trobada');
+      }
       break;
 
     case 'infocomarca':
@@ -30,8 +34,12 @@ void main(List<String> args) async {
         print("Has d'indicar una comarca");
         return;
       }
-      final comarca = await repository.infoComarca(args[1]);
-      print(comarca);
+      try {
+        final comarca = await repository.infoComarca(args[1]);
+        print(comarca);
+      } catch (e) {
+        print('Comarca no trobada');
+      }
       break;
 
     default:
