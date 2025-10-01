@@ -4,9 +4,7 @@ import 'package:provincies_barbosaadrian/infrastructure/mappers/provincies_mappe
 import '../../domain/entities/provincia.dart';
 import '../../domain/entities/comarca_simple.dart';
 import '../../domain/entities/comarca.dart';
-import '../../domain/repositories/comarques_repository.dart';
 import '../datasource/comarques_api.dart';
-import '../mappers/provincia_mapper.dart';
 import '../mappers/comarca_simple_mapper.dart';
 import '../mappers/comarca_mapper.dart';
 
