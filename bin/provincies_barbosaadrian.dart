@@ -2,7 +2,7 @@ import 'package:provincies_barbosaadrian/infrastructure/datasource/comarques_api
 import 'package:provincies_barbosaadrian/infrastructure/repositories/comarques_repository_impl.dart';
 
 void main(List<String> args) async {
-  final api = ComarquesApi();
+  final api = ComarquesApi("https://node-comarques-rest-server-production.up.railway.app/api/comarques");
   final repository = ComarquesRepositoryImpl(api);
 
   if (args.isEmpty) {

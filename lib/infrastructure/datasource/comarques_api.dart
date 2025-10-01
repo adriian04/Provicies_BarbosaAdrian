@@ -2,7 +2,9 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ComarquesApi {
-  final String baseUrl = "https://node-comarques-rest-server-production.up.railway.app/api/comarques";
+  String baseUrl;
+  ComarquesApi (this.baseUrl);
+
 
   Future<List<dynamic>> obtenirProvincies() async {
     final response = await http.get(Uri.parse("$baseUrl/provincies"));
