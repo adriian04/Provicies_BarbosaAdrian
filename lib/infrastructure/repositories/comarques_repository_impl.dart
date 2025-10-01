@@ -1,3 +1,6 @@
+import 'package:provincies_barbosaadrian/domain/repositories/comarca_repository.dart';
+import 'package:provincies_barbosaadrian/infrastructure/mappers/provincies_mapper.dart';
+
 import '../../domain/entities/provincia.dart';
 import '../../domain/entities/comarca_simple.dart';
 import '../../domain/entities/comarca.dart';

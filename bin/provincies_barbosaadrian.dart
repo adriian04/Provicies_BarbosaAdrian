@@ -1,5 +1,5 @@
-import 'package:tasca2/infrastructure/datasource/comarques_api.dart';
-import 'package:tasca2/infrastructure/repositories/comarques_repository_impl.dart';
+import 'package:provincies_barbosaadrian/infrastructure/datasource/comarques_api.dart';
+import 'package:provincies_barbosaadrian/infrastructure/repositories/comarques_repository_impl.dart';
 
 void main(List<String> args) async {
   final api = ComarquesApi();
