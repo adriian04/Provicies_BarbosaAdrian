@@ -6,7 +6,7 @@ void main(List<String> args) async {
   final repository = ComarquesRepositoryImpl(api);
 
   if (args.isEmpty) {
-    print("Usa: dart run tasca2 <provincies|comarques|infocomarca> [param]");
+    print("Usa: dart run provincies_barbosaadrian <provincies|comarques|infocomarca> [param]");
     return;
   }
 
@@ -21,8 +21,9 @@ void main(List<String> args) async {
         print("Has d'indicar una província");
         return;
       }
+      final provincia = args.sublist(1).join(' ');
       try {
-        final comarques = await repository.obtenirComarques(args[1]);
+        final comarques = await repository.obtenirComarques(provincia);
         comarques.forEach(print);
       } catch (e) {
         print('Província no trobada');
@@ -34,9 +35,10 @@ void main(List<String> args) async {
         print("Has d'indicar una comarca");
         return;
       }
+      final comarca = args.sublist(1).join(' '); 
       try {
-        final comarca = await repository.infoComarca(args[1]);
-        print(comarca);
+        final infoComarca = await repository.infoComarca(comarca);
+        print(infoComarca);
       } catch (e) {
         print('Comarca no trobada');
       }
